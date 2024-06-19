@@ -24,7 +24,7 @@ summary {
 
     &::-webkit-details-marker {
         display: none;
-    }    
+    }
 }
 
 .center {
@@ -82,6 +82,7 @@ label {
     transition: right .6s;
     background: #FFFFFF;
     box-shadow: 6px 4px 35px 0 rgba(17, 3, 3, 0.21);
+
     &__heading {
         color: #000;
         font-size: 14px;
@@ -197,6 +198,16 @@ label {
         color: $main_color;
         font-weight: bold;
     }
+
+    &__li:not(:last-child):after {
+        content: '\/';
+        padding-left: 10px;
+    }
+
+    &__li:last-child {
+        font-weight: bold;
+        color: #fa008e;
+    }
 }
 
 .sale {
@@ -282,6 +293,7 @@ label {
         padding: 0 16px 16px;
 
         background-color: white;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
     }
 
     &[open] {
@@ -393,7 +405,7 @@ label {
         flex-direction: column;
         gap: 8px;
         z-index: 10;
-    } 
+    }
 
     &__check {
         display: flex;
@@ -428,6 +440,7 @@ label {
 
         padding-top: 11px;
         padding-bottom: 42px;
+        border: 1px solid rgba(234, 234, 234, 1);
     }
 
     &__button {
@@ -459,6 +472,7 @@ label {
         padding: 65px 293px;
 
         background-color: #FFFFFF;
+        border: 1px solid rgba(234, 234, 234, 1);
 
         display: flex;
         flex-direction: column;
@@ -500,12 +514,17 @@ label {
             font-weight: 300;
             line-height: 29px;
             color: $main_color;
+            margin-bottom: 65.04px;
         }
 
         &__features {
-            margin: 130.09px 0 48.91px;
+            margin: 0px 0 48.91px;
+            padding-top: 65.05px;
             display: flex;
+            justify-content: center;
             gap: 42px;
+            width: 641px;
+            border-top: 1px solid rgba(234, 234, 234, 1);
         }
 
         &__features button {
@@ -518,6 +537,12 @@ label {
 
             border: none;
             cursor: pointer;
+        }
+
+        &__klick {
+            display: flex;
+            align-items: center;
+            gap: 9px;
         }
 
         &__button {
@@ -547,6 +572,7 @@ label {
 
     &__bottom {
         background: #FFF;
+        margin-bottom: 128px;
     }
 
     &__bottom__items {
@@ -709,6 +735,229 @@ label {
             line-height: 19px;
             color: #F16D7F;
         }
+    }
+}
+
+.product-selection {
+    padding-top: 96px;
+    padding-bottom: 128px;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__card {
+        width: 652px;
+        // max-height: 306px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__card-first,
+    &__card-second {
+        display: flex;
+        box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+
+        margin-bottom: 40px;
+
+    }
+
+    &__card-info {
+        padding: 22px 0 0 32px;
+
+        color: #575757;
+        font-size: 22px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        gap: 125px;
+        margin-bottom: 36px;
+
+    }
+
+    &__title {
+        color: #222;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &__button {
+            padding-top: 7px;
+            border: none;
+            background-color: white;
+        }
+
+        &__button:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__price::after {
+        content: '$300';
+        color: $main_color;
+    }
+
+    &__input {
+        display: flex;
+        gap: 24px;
+
+        & input {
+            border: 1px solid rgba(234, 234, 234, 1);
+            width: 44px;
+            height: 25px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        padding: 16px 41px 17px 39px;
+
+        color: #000;
+        font-size: 14px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        background-color: #FFFFFF;
+        border: 1px solid #A4A4A4;
+
+        display: flex;
+        flex-wrap: nowrap;
+
+        cursor: pointer;
+    }
+
+    &__button:hover {
+        background-color: #F16D7F;
+        color: #fff;
+        transition: .3s;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 57px;
+
+        &__address {
+            padding-top: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__address-title {
+            color: #222;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__address-input {
+            width: 360px;
+            padding: 13px 0 16px 17.14px;
+            border: 1px solid #A4A4A4
+        }
+
+        &__address-submit {
+            padding: 10px 12px;
+            width: 102px;
+
+            color: #4A4A4A;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+
+            background-color: #fff;
+            border: 1px solid #A4A4A4;
+
+            cursor: pointer;
+        }
+
+        &__address-submit:hover {
+            background-color: #F16D7F;
+            color: #fff;
+            transition: .3s;
+        }
+    }
+
+    &__purchase {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        padding: 39px 37px 42px 44px;
+        background-color: #F5F3F3;
+
+        &__price-first {
+            color: #4A4A4A;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &__price-first::after {
+            content: '$900';
+            padding-left: 25px;
+            color: #4A4A4A;
+        }
+
+        &__price-second {
+            margin-top: 12px;
+            margin-bottom: 21px;
+            margin-right: 5px;
+
+            color: #222;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__price-second::after {
+            content: '$900';
+            padding-left: 25px;
+            color: $main_color;
+        }
+
+        &__line {
+            width: 275px;
+            border-bottom: 1px solid #E2E2E2;
+        }
+
+        &__button {
+            width: 273px;
+            padding: 15px 0 16px;
+            margin-top: 17px;
+            margin-bottom: 42px;
+            margin-right: 10px;
+            border: none;
+            background-color: $main_color;
+            color: #fff;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+
+            cursor: pointer;
+        }
+
+
     }
 }
 
@@ -1098,4 +1347,55 @@ label {
     .promo__heading {
         font-size: 14px;
     }
+}
+
+
+
+
+.breadcrump{
+    background: #F8F3F4;
+    height: 148px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__heading{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: #F16D7F;
+    }
+    &__link{
+        font-style: normal;
+        font-weight: 300;
+        font-style: 14px;
+        line-height: 17px;
+        text-decoration: none;
+        color: #636363;
+        &:hover{
+            color: #F16D7F;
+        }
+    }
+    &__links{
+        display: flex;
+    }
+    &__box:last-of-type .breadcrump__link{
+        font-weight: 700;
+        font-style: 14px;
+        line-height: 17px;
+        color: #F16D7F;
+    }
+    &__box:not(:last-child)::after{
+        content: '/';
+        padding-left: 8px;
+        padding-right: 8px;
+        font-style: normal;
+        font-weight: 300;
+        font-style: 14px;
+        line-height: 17px;
+        text-decoration: none;
+        color: #636363;
+    }
+
 }
