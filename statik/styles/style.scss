@@ -62,6 +62,16 @@ summary {
     }
 }
 
+
+.breadcrump__links{
+    display: flex;   
+}
+.breadcrump__link {
+    color: #636363;
+}
+.breadcrubs__link__site {
+    color: $main_color ;
+}
 label {
     cursor: pointer;
 }
